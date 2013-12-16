@@ -51,3 +51,13 @@ Plataformas: Linux (testado em Linux UBUNTU 13.10 e Linux Mint 15, 16) e Windows
 
 Desenvolvido em Lazarus 1.0.12 <"http://www.lazarus.freepascal.org/">
 
+---
+
+			INSTRUÇÔES PARA COMPILAR
+
+Linux:
+	Necessario Lazarus 1.0.12 + FPC
+
+Windows:
+	Em breve...
+
