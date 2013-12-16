@@ -1,7 +1,7 @@
 object frmSobre: TfrmSobre
   Left = 615
   Height = 380
-  Top = 98
+  Top = 75
   Width = 450
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
@@ -9,6 +9,7 @@ object frmSobre: TfrmSobre
   ClientHeight = 380
   ClientWidth = 450
   Color = clWhite
+  Position = poDesktopCenter
   LCLVersion = '1.0.12.0'
   object Image1: TImage
     Left = 24
