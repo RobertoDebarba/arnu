@@ -1,7 +1,7 @@
 object frmNormas: TfrmNormas
   Left = 392
   Height = 366
-  Top = 107
+  Top = 84
   Width = 843
   Align = alClient
   BorderStyle = bsNone
@@ -10,7 +10,7 @@ object frmNormas: TfrmNormas
   Color = clBackground
   LCLVersion = '1.0.12.0'
   object Label1: TLabel
-    Left = 72
+    Left = 74
     Height = 312
     Top = 34
     Width = 694
@@ -24,7 +24,7 @@ object frmNormas: TfrmNormas
   object ButtonVoltar: TButton
     Left = 16
     Height = 35
-    Top = 320
+    Top = 311
     Width = 88
     Caption = 'Voltar'
     Font.Height = -16

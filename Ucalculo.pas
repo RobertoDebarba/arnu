@@ -58,11 +58,9 @@ type
     procedure bttRegrasClick(Sender: TObject);
     procedure bttSobreClick(Sender: TObject);
     function calcular : integer;
-    procedure Edit1Change(Sender: TObject);
     procedure Edit1KeyPress(Sender: TObject; var Key: char);
     procedure Edit2KeyPress(Sender: TObject; var Key: char);
     procedure ExibirResultado;
-    procedure FormShow(Sender: TObject);
     function procurarPonto : boolean;
   private
     { private declarations }
@@ -74,7 +72,6 @@ var
   frmCalculo: TfrmCalculo;
 
 implementation
-
 
 uses
   UNormas, USobre;
@@ -253,12 +250,6 @@ begin
   IpHtmlPanel1.OpenURL(ExpandLocalHtmlFileName('bin/index.html'));
 end;
 
-procedure TfrmCalculo.FormShow(Sender: TObject);
-begin
-
-end;
-
-
 // Calculo ------------------------------------------------------------------------------------------------------------
 
 function TfrmCalculo.calcular : integer;
@@ -325,11 +316,6 @@ begin
       Result := 4;
     end;
   end;
-
-end;
-
-procedure TfrmCalculo.Edit1Change(Sender: TObject);
-begin
 
 end;
 

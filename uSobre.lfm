@@ -1,7 +1,7 @@
 object frmSobre: TfrmSobre
   Left = 615
   Height = 380
-  Top = 121
+  Top = 98
   Width = 450
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
@@ -346,8 +346,8 @@ object frmSobre: TfrmSobre
     Left = 200
     Height = 26
     Top = 152
-    Width = 57
-    Caption = 'Arnu'
+    Width = 68
+    Caption = 'ARNU'
     Font.Height = -21
     Font.Style = [fsBold]
     ParentColor = False
