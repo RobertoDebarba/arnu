@@ -62,5 +62,7 @@ implementation
 
 {$R *.lfm}
 
+{ TfrmSobre }
+
 end.
 

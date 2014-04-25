@@ -1,7 +1,7 @@
 object frmCalculo: TfrmCalculo
   Left = 266
   Height = 462
-  Top = 81
+  Top = 27
   Width = 843
   Align = alClient
   BorderIcons = [biSystemMenu, biMinimize]
@@ -26,32 +26,32 @@ object frmCalculo: TfrmCalculo
     object Label7: TLabel
       AnchorSideLeft.Control = Label9
       AnchorSideLeft.Side = asrCenter
-      Left = 316
-      Height = 18
+      Left = 305
+      Height = 20
       Top = 64
-      Width = 203
+      Width = 227
       BorderSpacing.Left = 50
       Caption = '"Arredondamento de Números"'
       Font.CharSet = ANSI_CHARSET
       Font.Color = clWhite
-      Font.Height = -15
-      Font.Name = 'Sans'
+      Font.Height = -17
+      Font.Name = 'Arial'
       ParentColor = False
       ParentFont = False
     end
     object Label8: TLabel
       AnchorSideLeft.Control = Label9
       AnchorSideLeft.Side = asrCenter
-      Left = 393
-      Height = 20
+      Left = 392
+      Height = 23
       Top = 40
-      Width = 48
+      Width = 53
       BorderSpacing.Left = 55
       Caption = 'ARNU'
       Font.CharSet = ANSI_CHARSET
       Font.Color = clWhite
-      Font.Height = -16
-      Font.Name = 'Sans'
+      Font.Height = -19
+      Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentColor = False
       ParentFont = False
@@ -59,16 +59,16 @@ object frmCalculo: TfrmCalculo
     object Label9: TLabel
       AnchorSideLeft.Control = Image2
       AnchorSideLeft.Side = asrBottom
-      Left = 256
-      Height = 18
+      Left = 237
+      Height = 20
       Top = 16
-      Width = 322
-      BorderSpacing.Left = 96
+      Width = 363
+      BorderSpacing.Left = 77
       Caption = 'SISTEMA DE APOIO DIDÁTICO PROFISSIONAL'
       Font.CharSet = ANSI_CHARSET
       Font.Color = clWhite
-      Font.Height = -15
-      Font.Name = 'Sans'
+      Font.Height = -17
+      Font.Name = 'Arial'
       ParentColor = False
       ParentFont = False
     end
@@ -823,7 +823,11 @@ object frmCalculo: TfrmCalculo
       Top = 64
       Width = 75
       Caption = 'Sobre'
+      Color = 16185078
+      Font.Height = -16
+      Font.Name = 'Arial'
       OnClick = bttSobreClick
+      ParentFont = False
       TabOrder = 0
     end
   end
@@ -837,6 +841,8 @@ object frmCalculo: TfrmCalculo
     BorderStyle = bsSingle
     ClientHeight = 362
     ClientWidth = 839
+    Color = 14408667
+    ParentColor = False
     TabOrder = 0
     object BitBtn1: TBitBtn
       Left = 133
@@ -844,17 +850,20 @@ object frmCalculo: TfrmCalculo
       Top = 184
       Width = 145
       Caption = 'Arredondar'
-      Font.Height = -19
+      Color = 16185078
+      Font.Height = -21
+      Font.Name = 'Arial'
       OnClick = BitBtn1Click
       ParentFont = False
       TabOrder = 2
     end
     object Edit1: TEdit
       Left = 134
-      Height = 27
+      Height = 30
       Top = 68
       Width = 218
-      Font.Height = -16
+      Font.Height = -19
+      Font.Name = 'Arial'
       MaxLength = 14
       OnKeyPress = Edit1KeyPress
       ParentFont = False
@@ -862,10 +871,11 @@ object frmCalculo: TfrmCalculo
     end
     object Edit2: TEdit
       Left = 263
-      Height = 27
+      Height = 30
       Top = 120
       Width = 88
-      Font.Height = -16
+      Font.Height = -19
+      Font.Name = 'Arial'
       OnKeyPress = Edit2KeyPress
       ParentFont = False
       TabOrder = 1
@@ -874,69 +884,77 @@ object frmCalculo: TfrmCalculo
       Left = 133
       Height = 34
       Top = 277
-      Width = 16
+      Width = 17
       Caption = '0'
-      Font.Height = -27
+      Font.Height = -29
+      Font.Name = 'Arial'
       ParentColor = False
       ParentFont = False
     end
     object Label3: TLabel
-      Left = 21
-      Height = 20
-      Top = 81
-      Width = 89
+      Left = 20
+      Height = 23
+      Top = 75
+      Width = 101
       Caption = 'Valor inicial:'
-      Font.Height = -16
+      Font.Height = -19
+      Font.Name = 'Arial'
       ParentColor = False
       ParentFont = False
     end
     object Label4: TLabel
-      Left = 21
-      Height = 20
-      Top = 129
-      Width = 194
+      Left = 20
+      Height = 23
+      Top = 127
+      Width = 236
       Caption = 'Número de casas decimais:'
-      Font.Height = -16
+      Font.Height = -19
+      Font.Name = 'Arial'
       ParentColor = False
       ParentFont = False
     end
     object Label5: TLabel
-      Left = 29
-      Height = 20
-      Top = 291
-      Width = 76
+      Left = 21
+      Height = 23
+      Top = 288
+      Width = 92
       Caption = 'Resultado:'
-      Font.Height = -16
+      Font.Height = -19
+      Font.Name = 'Arial'
       ParentColor = False
       ParentFont = False
     end
     object Label2: TLabel
       Left = 368
-      Height = 26
+      Height = 28
       Top = 24
-      Width = 188
+      Width = 218
       Caption = 'Regra de resolução:'
-      Font.Height = -21
+      Font.Height = -24
+      Font.Name = 'Arial'
       ParentColor = False
       ParentFont = False
     end
     object Label6: TLabel
       Left = 21
-      Height = 26
+      Height = 28
       Top = 24
-      Width = 75
+      Width = 89
       Caption = 'Cálculo:'
-      Font.Height = -21
+      Font.Height = -24
+      Font.Name = 'Arial'
       ParentColor = False
       ParentFont = False
     end
     object bttRegras: TBitBtn
-      Left = 728
+      Left = 718
       Height = 34
-      Top = 323
+      Top = 319
       Width = 96
       Caption = 'Normas'
-      Font.Height = -16
+      Color = 16185078
+      Font.Height = -19
+      Font.Name = 'Arial'
       OnClick = bttRegrasClick
       ParentFont = False
       TabOrder = 3
@@ -960,8 +978,8 @@ object frmCalculo: TfrmCalculo
         Align = alClient
         DataProvider = IpFileDataProvider1
         FixedTypeface = 'Courier New'
-        DefaultTypeFace = 'default'
-        DefaultFontSize = 12
+        DefaultTypeFace = 'Arial'
+        DefaultFontSize = 13
         FlagErrors = False
         PrintSettings.MarginLeft = 0.5
         PrintSettings.MarginTop = 0.5

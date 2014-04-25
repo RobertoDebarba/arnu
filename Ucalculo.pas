@@ -62,6 +62,7 @@ type
     procedure Edit2KeyPress(Sender: TObject; var Key: char);
     procedure ExibirResultado;
     function procurarPonto : boolean;
+    function OSVersion: string;     // Veridica S.O.
   private
     { private declarations }
   public
@@ -121,6 +122,25 @@ procedure TfrmCalculo.Edit2KeyPress(Sender: TObject; var Key: char);    // Edit2
 begin
   if not (Key in ['0'..'9', #8]) then
     Key := #0;
+end;
+
+function TfrmCalculo.OSVersion: string;                                 // Verifica O.S.
+begin
+  {$IFDEF LCLcarbon}
+  OSVersion := 'Mac OS X 10';
+  {$ELSE}
+  {$IFDEF Linux}
+  OSVersion := 'Linux Kernel';
+  {$ELSE}
+  {$IFDEF UNIX}
+  OSVersion := 'Unix';
+  {$ELSE}
+  {$IFDEF WINDOWS}
+  OSVersion:= 'Windows';
+  {$ENDIF}
+  {$ENDIF}
+  {$ENDIF}
+  {$ENDIF}
 end;
 
 // Botão --------------------------------------------------------------------------------------------------------------
@@ -206,15 +226,22 @@ procedure TfrmCalculo.ExibirResultado;      // Chama procedure de calculo;
 var
   resultado, x, i, QG1 : integer;
   arq : TextFile;
-
 begin
   resultado := Calcular;     // Atribui resultado à variavel para não chamar procedure Calcular varias vezes;
 
-  AssignFile(arq, 'bin/index.html');
+  if OSVersion = 'Linux Kernel' then
+    AssignFile(arq, '/tmp/index.html')
+  else if OSVersion = 'Windows' then
+    AssignFile(arq, 'C:/Windows/Temp/index.html');
+
   ReWrite(arq);
 
   WriteLn(arq, '<html>');
-  WriteLn(arq, '<head><meta http-equiv="content-type" content="text/html; charset=ANSI"></head>');
+  if OSVersion = 'Linux Kernel' then
+    WriteLn(arq, '<head><meta http-equiv="content-type" content="text/html; charset=ANSI"></head>')
+  else if OSVersion = 'Windows' then
+    WriteLn(arq, '<head><meta http-equiv="content-type" content="text/html; charset=UTF-8"></head>');
+
   WriteLn(arq, '<body>');
 
   if resultado = 1 then
@@ -286,8 +313,11 @@ begin
 
   CloseFile(arq);
 
-  //HTMLViewer1.LoadFromFile('bin/index.html');
-  IpHtmlPanel1.OpenURL(ExpandLocalHtmlFileName('bin/index.html'));
+  if OSVersion = 'Linux Kernel' then
+    IpHtmlPanel1.OpenURL(ExpandLocalHtmlFileName('/tmp/index.html'))
+  else if OSVersion = 'Windows' then
+    IpHtmlPanel1.OpenURL(ExpandLocalHtmlFileName('C:/Windows/Temp/index.html'));
+  //IpHtmlPanel1.OpenURL(ExpandLocalHtmlFileName('bin/index.html'));
 end;
 
 // Calculo ------------------------------------------------------------------------------------------------------------
