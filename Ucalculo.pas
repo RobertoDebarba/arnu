@@ -125,9 +125,47 @@ end;
 
 // Botão --------------------------------------------------------------------------------------------------------------
 
+function SRound2( aValue: Extended; aDecimalPlaces: Byte): Extended;
+var
+  xPow10, xAux, xPow10Ant, xAuxAnt: Extended;
+  xDefault8087CW: word;
+begin
+  xDefault8087CW:= System.Default8087CW;
+  {$ASMMODE intel}
+  asm
+    FNINIT
+    FWAIT
+    FLDCW   xDefault8087CW
+  end;
+  if (aValue > 0.0) then
+    aValue := aValue + 3.72529029846191406e-09
+  else
+  if (aValue < 0.0) then
+    aValue := aValue - 3.72529029846191406e-09;
+
+  xPow10 := Power(10.0, aDecimalPlaces);
+  xAux := Frac(Frac(aValue) * xPow10);
+  xPow10Ant := Power(10.0, aDecimalPlaces - 1);
+  xAuxAnt := Frac(Frac(aValue) * xPow10Ant);
+
+  if (StrToFloat(copy(FloatToStr(xAux), 0, 3)) > 0.5) then
+    Result := Int(aValue * xPow10 + 1.0) / xPow10
+  else
+  if (xAux < -0.5) then
+    Result := Int(aValue * xPow10 - 1.0) / xPow10
+  else
+  if (StrToFloat(copy(FloatToStr(xAux), 0, 3)) = 0.5) then
+  begin
+    if (StrToInt(copy(FloatToStr(xAuxAnt*10), 0, 1)) mod 2 = 0) then  // Par
+      Result := Int(aValue * xPow10) / xPow10
+    else                                                              //Impar
+      Result := Int(aValue * xPow10 + 1.00) / xPow10
+  end;
+end;
+
 procedure TfrmCalculo.BitBtn1Click(Sender: TObject);       // Arredondar -----------------------------
 var
-  valor : real;
+  valor : Extended;
   casas : integer;
 
 begin
@@ -137,10 +175,12 @@ begin
     begin
       ExibirResultado;     // Descobrir norma. Resultado apenas para exibição, não interfere no calculo;
 
+      DefaultFormatSettings.DecimalSeparator:= '.'; // Define char de floating point
+
       valor := StrToFloat(Edit1.Text);        // Label para VAR
       casas := StrToInt(Edit2.Text);
 
-      Label1.Caption := FloatToStr(RoundTo(valor, -(casas)));    // Calculo de arredondamento
+      Label1.Caption := FloatToStr(SRound2(valor, casas));    // Calculo de arredondamento
     end
     else
       ShowMessage('Nenhuma casa decimal encontrada!');

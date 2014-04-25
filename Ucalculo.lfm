@@ -11,7 +11,7 @@ object frmCalculo: TfrmCalculo
   ClientWidth = 843
   Color = clBackground
   Position = poDesktopCenter
-  LCLVersion = '1.0.12.0'
+  LCLVersion = '1.0.14.0'
   object Panel2: TPanel
     Left = 0
     Height = 96
@@ -26,10 +26,10 @@ object frmCalculo: TfrmCalculo
     object Label7: TLabel
       AnchorSideLeft.Control = Label9
       AnchorSideLeft.Side = asrCenter
-      Left = 303
-      Height = 19
+      Left = 316
+      Height = 18
       Top = 64
-      Width = 240
+      Width = 203
       BorderSpacing.Left = 50
       Caption = '"Arredondamento de Números"'
       Font.CharSet = ANSI_CHARSET
@@ -42,10 +42,10 @@ object frmCalculo: TfrmCalculo
     object Label8: TLabel
       AnchorSideLeft.Control = Label9
       AnchorSideLeft.Side = asrCenter
-      Left = 398
+      Left = 393
       Height = 20
       Top = 40
-      Width = 51
+      Width = 48
       BorderSpacing.Left = 55
       Caption = 'ARNU'
       Font.CharSet = ANSI_CHARSET
@@ -60,9 +60,9 @@ object frmCalculo: TfrmCalculo
       AnchorSideLeft.Control = Image2
       AnchorSideLeft.Side = asrBottom
       Left = 256
-      Height = 19
+      Height = 18
       Top = 16
-      Width = 335
+      Width = 322
       BorderSpacing.Left = 96
       Caption = 'SISTEMA DE APOIO DIDÁTICO PROFISSIONAL'
       Font.CharSet = ANSI_CHARSET
@@ -835,8 +835,8 @@ object frmCalculo: TfrmCalculo
     Align = alClient
     BorderWidth = 5
     BorderStyle = bsSingle
-    ClientHeight = 364
-    ClientWidth = 841
+    ClientHeight = 362
+    ClientWidth = 839
     TabOrder = 0
     object BitBtn1: TBitBtn
       Left = 133
@@ -851,7 +851,7 @@ object frmCalculo: TfrmCalculo
     end
     object Edit1: TEdit
       Left = 134
-      Height = 29
+      Height = 27
       Top = 68
       Width = 218
       Font.Height = -16
@@ -862,7 +862,7 @@ object frmCalculo: TfrmCalculo
     end
     object Edit2: TEdit
       Left = 263
-      Height = 29
+      Height = 27
       Top = 120
       Width = 88
       Font.Height = -16
@@ -874,7 +874,7 @@ object frmCalculo: TfrmCalculo
       Left = 133
       Height = 34
       Top = 277
-      Width = 18
+      Width = 16
       Caption = '0'
       Font.Height = -27
       ParentColor = False
@@ -884,7 +884,7 @@ object frmCalculo: TfrmCalculo
       Left = 21
       Height = 20
       Top = 81
-      Width = 97
+      Width = 89
       Caption = 'Valor inicial:'
       Font.Height = -16
       ParentColor = False
@@ -894,7 +894,7 @@ object frmCalculo: TfrmCalculo
       Left = 21
       Height = 20
       Top = 129
-      Width = 222
+      Width = 194
       Caption = 'Número de casas decimais:'
       Font.Height = -16
       ParentColor = False
@@ -904,7 +904,7 @@ object frmCalculo: TfrmCalculo
       Left = 29
       Height = 20
       Top = 291
-      Width = 85
+      Width = 76
       Caption = 'Resultado:'
       Font.Height = -16
       ParentColor = False
@@ -914,7 +914,7 @@ object frmCalculo: TfrmCalculo
       Left = 368
       Height = 26
       Top = 24
-      Width = 213
+      Width = 188
       Caption = 'Regra de resolução:'
       Font.Height = -21
       ParentColor = False
@@ -924,7 +924,7 @@ object frmCalculo: TfrmCalculo
       Left = 21
       Height = 26
       Top = 24
-      Width = 86
+      Width = 75
       Caption = 'Cálculo:'
       Font.Height = -21
       ParentColor = False
