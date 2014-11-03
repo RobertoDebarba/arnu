@@ -200,7 +200,12 @@ begin
       valor := StrToFloat(Edit1.Text);        // Label para VAR
       casas := StrToInt(Edit2.Text);
 
-      Label1.Caption := FloatToStr(SRound2(valor, casas));    // Calculo de arredondamento
+      // Calculo de arredondamento
+      // Verifica S.O. Se for Windows faz correção de valor na memoria
+      if (OSVersion() = 'Windows') then
+         Label1.Caption := FloatToStr(SRound2(valor, casas))
+      else
+         Label1.Caption := FloatToStr(RoundTo(valor, -(casas)));
     end
     else
       ShowMessage('Nenhuma casa decimal encontrada!');
