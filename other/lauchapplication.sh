@@ -1,0 +1,2 @@
+cd /opt/arnu/
+./arnu

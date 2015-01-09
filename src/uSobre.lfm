@@ -1,7 +1,7 @@
 object frmSobre: TfrmSobre
-  Left = 615
+  Left = 373
   Height = 380
-  Top = 52
+  Top = 338
   Width = 450
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
@@ -10,7 +10,7 @@ object frmSobre: TfrmSobre
   ClientWidth = 450
   Color = clWhite
   Position = poDesktopCenter
-  LCLVersion = '1.0.12.0'
+  LCLVersion = '1.2.4.0'
   object Image1: TImage
     Left = 24
     Height = 128
@@ -345,9 +345,9 @@ object frmSobre: TfrmSobre
   end
   object Label1: TLabel
     Left = 193
-    Height = 29
+    Height = 28
     Top = 152
-    Width = 69
+    Width = 68
     Caption = 'ARNU'
     Font.Height = -24
     Font.Name = 'Arial'
@@ -357,9 +357,9 @@ object frmSobre: TfrmSobre
   end
   object Label2: TLabel
     Left = 72
-    Height = 29
+    Height = 28
     Top = 181
-    Width = 313
+    Width = 312
     Caption = 'Arredondamento de Números'
     Font.Height = -24
     Font.Name = 'Arial'
@@ -368,10 +368,10 @@ object frmSobre: TfrmSobre
   end
   object Label3: TLabel
     Left = 342
-    Height = 24
+    Height = 23
     Top = 221
-    Width = 43
-    Caption = 'v 1.0'
+    Width = 42
+    Caption = 'v 1.3'
     Font.Height = -19
     Font.Name = 'Arial'
     ParentColor = False
@@ -379,9 +379,9 @@ object frmSobre: TfrmSobre
   end
   object Label4: TLabel
     Left = 49
-    Height = 21
+    Height = 20
     Top = 256
-    Width = 135
+    Width = 134
     Caption = 'Desenvolvimento:'
     Font.Height = -17
     Font.Name = 'Arial'
@@ -391,9 +391,9 @@ object frmSobre: TfrmSobre
   end
   object Label5: TLabel
     Left = 40
-    Height = 21
+    Height = 20
     Top = 280
-    Width = 150
+    Width = 149
     Caption = 'Jonathan Eli Suptitz'
     Font.Height = -17
     Font.Name = 'Arial'
@@ -402,9 +402,9 @@ object frmSobre: TfrmSobre
   end
   object Label6: TLabel
     Left = 32
-    Height = 21
+    Height = 20
     Top = 304
-    Width = 164
+    Width = 163
     Caption = 'Roberto Luiz Debarba'
     Font.Height = -17
     Font.Name = 'Arial'
@@ -413,9 +413,9 @@ object frmSobre: TfrmSobre
   end
   object Label7: TLabel
     Left = 275
-    Height = 19
+    Height = 18
     Top = 205
-    Width = 110
+    Width = 109
     Caption = 'Outubro de 2013'
     Font.Height = -15
     Font.Name = 'Arial'
@@ -424,9 +424,9 @@ object frmSobre: TfrmSobre
   end
   object Label8: TLabel
     Left = 274
-    Height = 21
+    Height = 20
     Top = 256
-    Width = 118
+    Width = 117
     Caption = 'Agradecimento:'
     Font.Height = -17
     Font.Name = 'Arial'
@@ -436,7 +436,7 @@ object frmSobre: TfrmSobre
   end
   object Label9: TLabel
     Left = 276
-    Height = 21
+    Height = 20
     Top = 280
     Width = 109
     Caption = 'CEDUP Timbó'
@@ -447,9 +447,9 @@ object frmSobre: TfrmSobre
   end
   object Label10: TLabel
     Left = 248
-    Height = 21
+    Height = 20
     Top = 304
-    Width = 167
+    Width = 166
     Caption = 'Direção e professores'
     Font.Height = -17
     Font.Name = 'Arial'
@@ -458,9 +458,9 @@ object frmSobre: TfrmSobre
   end
   object Label11: TLabel
     Left = 15
-    Height = 16
+    Height = 15
     Top = 360
-    Width = 164
+    Width = 163
     Caption = 'roberto.debarba@gmail.com'
     Font.Height = -13
     Font.Name = 'Arial'
@@ -469,9 +469,9 @@ object frmSobre: TfrmSobre
   end
   object Label12: TLabel
     Left = 23
-    Height = 16
+    Height = 15
     Top = 344
-    Width = 148
+    Width = 147
     Caption = 'jonny.suptitz@gmail.com'
     Font.Height = -13
     Font.Name = 'Arial'
@@ -479,11 +479,11 @@ object frmSobre: TfrmSobre
     ParentFont = False
   end
   object Label13: TLabel
-    Left = 259
-    Height = 16
+    Left = 243
+    Height = 15
     Top = 344
-    Width = 109
-    Caption = 'Copyright (C) 2013'
+    Width = 148
+    Caption = 'Copyright (C) 2013 - 2015'
     Font.Height = -13
     Font.Name = 'Arial'
     ParentColor = False
@@ -491,9 +491,9 @@ object frmSobre: TfrmSobre
   end
   object Label14: TLabel
     Left = 203
-    Height = 16
+    Height = 15
     Top = 360
-    Width = 239
+    Width = 238
     Caption = 'Este software está sob a licença GPL v3'
     Font.Height = -13
     Font.Name = 'Arial'

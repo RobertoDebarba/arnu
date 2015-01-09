@@ -145,7 +145,7 @@ end;
 
 // Botão --------------------------------------------------------------------------------------------------------------
 
-function SRound2( aValue: Extended; aDecimalPlaces: Byte): Extended;
+function round2( aValue: Extended; aDecimalPlaces: Byte): Extended;
 var
   xPow10, xAux, xPow10Ant, xAuxAnt: Extended;
   xDefault8087CW: word;
@@ -203,7 +203,7 @@ begin
       // Calculo de arredondamento
       // Verifica S.O. Se for Windows faz correção de valor na memoria
       if (OSVersion() = 'Windows') then
-         Label1.Caption := FloatToStr(SRound2(valor, casas))
+         Label1.Caption := FloatToStr(round2(valor, casas))
       else
          Label1.Caption := FloatToStr(RoundTo(valor, -(casas)));
     end
