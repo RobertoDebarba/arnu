@@ -1,6 +1,8 @@
 #Diretorio de instalação
 DIRBIN=/usr/bin
-DIRETC=/usr/lib/arnu
+DIRSHARE=/usr/share/arnu
+DIRDOCDEB=/usr/share/doc/arnu
+DIRMAN=/usr/share/man/man8
 #Diretorio do atalho de lançador
 DIRLAN=/usr/share/applications/
 
@@ -21,14 +23,18 @@ clean:
 
 #Instala aplicativo, copiando arquivos para pastas
 install:
-	@mkdir $(DIRETC)
+	@mkdir $(DIRDOCDEB)
+	@mkdir $(DIRSHARE)
 	@echo 'Copiando arquivos binários...'
 	@cp src/arnu $(DIRBIN)
 	@echo 'Copiando arquivos de instalação...'
-	@cp other/icone.jpg $(DIRETC)
-	@cp other/lauchapplication.sh $(DIRETC)
+	@cp other/icone.jpg $(DIRSHARE)
+	@cp other/lauchapplication.sh $(DIRSHARE)
 	@echo 'Criando atalho no lançador...'
 	@desktop-file-install other/ARNU.desktop
+	@echo 'Copiando documentacao...'
+	@cp changelog.Debian.gz $(DIRDOCDEB)
+	@cp other/arnu.8.gz $(DIRMAN)
 
 .PHONY: uninstall
 
@@ -36,6 +42,10 @@ install:
 uninstall:
 	@echo 'Removendo arquivos de instalação...'
 	@rm -f $(DIRBIN)/arnu
-	@rm -rf $(DIRETC)
 	@echo 'Removendo atalho do lançador...'
 	@rm -f $(DIRLAN)'ARNU.desktop'
+	@rm -rf $(DIRSHARE)
+	@echo 'Removendo documentacao...'
+	@rm -rf $(DIRDOCDEB)
+	@rm -f $(DIRMAN)/arnu.8.gz
+

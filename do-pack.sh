@@ -36,11 +36,11 @@ fi
 #Executa operacao principal
 echo "Criando documentacao..."
 mkdir doc-pak
-cp AUTHORS copyright VERSION doc-pak
+cp AUTHORS copyright README VERSION changelog.gz doc-pak
 
 echo "Compilando aplicativo..."
 make
-checkinstall $target --install=no -y --pkgname=arnu --pkgversion=$1 --pkgrelease=$2 --pkglicense=GPL-3 --maintainer='Roberto Luiz Debarba \<roberto.debarba@gmail.com\>' --deldoc=yes
+checkinstall $target --install=no -y --pkgname=arnu --pkgversion=$1 --pkgrelease=$2 --pkglicense=GPL-3+ --pkggroup=math --maintainer='Roberto Luiz Debarba \<roberto.debarba@gmail.com\>' --deldoc=yes
 
 echo "Limpando arquivos de compilacao..."
 make uninstall
