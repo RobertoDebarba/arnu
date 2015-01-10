@@ -30,6 +30,7 @@ Dependencias:
 ------------
 
  - lazbuild (# sudo apt-get install -y lazarus)
+ - desktop-file-utils (# sudo apt-get install -y desktop-file-utils)
 
 Instruções:
 ----------
@@ -53,7 +54,7 @@ INSTRUÇÕES - WINDOWS
 Dependencias:
 ------------
 
- - lazbuild (# sudo apt-get install -y lazarus)
+ - lazbuild (Lazarus)
 
 Instruções:
 ----------

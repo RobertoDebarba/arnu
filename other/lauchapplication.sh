@@ -1,2 +1,2 @@
-cd /opt/arnu/
+cd /usr/bin
 ./arnu

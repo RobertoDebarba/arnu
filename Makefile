@@ -1,5 +1,6 @@
 #Diretorio de instalação
-DIRAPP=/opt/arnu
+DIRBIN=/usr/bin
+DIRETC=/usr/lib/arnu
 #Diretorio do atalho de lançador
 DIRLAN=/usr/share/applications/
 
@@ -20,20 +21,21 @@ clean:
 
 #Instala aplicativo, copiando arquivos para pastas
 install:
-	@mkdir $(DIRAPP)
+	@mkdir $(DIRETC)
 	@echo 'Copiando arquivos binários...'
-	@cp src/arnu $(DIRAPP)
+	@cp src/arnu $(DIRBIN)
 	@echo 'Copiando arquivos de instalação...'
-	@cp other/icone.jpg $(DIRAPP)
-	@cp other/lauchapplication.sh $(DIRAPP)
+	@cp other/icone.jpg $(DIRETC)
+	@cp other/lauchapplication.sh $(DIRETC)
 	@echo 'Criando atalho no lançador...'
-	@cp other/ARNU.desktop $(DIRLAN)
+	@desktop-file-install other/ARNU.desktop
 
 .PHONY: uninstall
 
 #Desinstala aplicativo, removendo arquivos das pastas
 uninstall:
 	@echo 'Removendo arquivos de instalação...'
-	@rm -rf $(DIRAPP)
+	@rm -f $(DIRBIN)/arnu
+	@rm -rf $(DIRETC)
 	@echo 'Removendo atalho do lançador...'
 	@rm -f $(DIRLAN)'ARNU.desktop'
