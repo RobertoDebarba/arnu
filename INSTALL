@@ -60,3 +60,24 @@ Instruções:
 ----------
  lazbuild -B src/Arnu.lpr
 
+
+======================================================================================
+INSTRUÇÕES - EMPACOTAMENTO (LINUX)
+======================================================================================
+
+Dependencias:
+------------
+
+ - lazbuild (# sudo apt-get install -y lazarus)
+ - desktop-file-utils (# sudo apt-get install -y desktop-file-utils)
+
+Instruções:
+----------
+ # sh do-pack.sh <versao> <release> -<tipo de pacote 1> -<tipo de pacote 2 (opcional)>
+
+ Tipo de pacote:
+   -R .rpm
+   -D .deb
+
+ Exemplo:
+   # sh do-pack.sh 1.3 1 -D
