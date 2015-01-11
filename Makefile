@@ -28,8 +28,7 @@ install:
 	@echo 'Copiando arquivos binários...'
 	@cp src/arnu $(DIRBIN)
 	@echo 'Copiando arquivos de instalação...'
-	@cp other/icone.jpg $(DIRSHARE)
-	@cp other/lauchapplication.sh $(DIRSHARE)
+	@cp other/arnu.svg $(DIRSHARE)
 	@echo 'Criando atalho no lançador...'
 	@desktop-file-install other/ARNU.desktop
 	@echo 'Copiando documentacao...'

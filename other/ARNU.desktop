@@ -2,9 +2,9 @@
 Comment=
 Terminal=false
 Name=ARNU
-Exec=sh /usr/share/arnu/lauchapplication.sh
+Exec=arnu
 Type=Application
-Icon=/usr/share/arnu/icone.jpg
+Icon=/usr/share/arnu/arnu.svg
 Name[pt_BR]=ARNU
 Categories=Education;
 Comment[pt_BR.UTF-8]=Arredondamento de Números
